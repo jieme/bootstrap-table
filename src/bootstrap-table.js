@@ -232,7 +232,7 @@
         }
         var props = field.split('.');
         for (var p in props) {
-            value = value && value[props[p]];
+            value = value || value[props[p]];
         }
         return escape ? escapeHTML(value) : value;
     };
